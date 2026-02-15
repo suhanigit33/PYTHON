@@ -1,0 +1,162 @@
+1.Input n elements into a list and display using loop 
+n = int(input("Enter number of elements: ")) 
+lst = [] 
+for i in range(n): 
+val = int(input("Enter element: ")) 
+lst.append(val) 
+print("List elements are:") 
+for i in lst: 
+print(i) 
+###
+
+2. Count even and odd numbers in a list 
+lst = list(map(int, input("Enter list elements: ").split())) 
+even = 0 
+odd = 0 
+for i in lst: 
+if i % 2 == 0: 
+even += 1 
+else: 
+odd += 1 
+print("Even count:", even) 
+print("Odd count:", odd) 
+###
+
+3.Sum of all elements in a list 
+lst = list(map(int, input("Enter elements: ").split())) 
+total = 0 
+for i in lst: 
+total += i 
+print("Sum =", total) 
+###
+
+4.Largest and smallest element 
+lst = list(map(int, input("Enter elements: ").split())) 
+largest = lst[0] 
+smallest = lst[0] 
+for i in lst: 
+if i > largest: 
+largest = i 
+if i < smallest: 
+smallest = i 
+print("Largest =", largest) 
+print("Smallest =", smallest) 
+###
+
+5. Count occurrences of an element 
+lst = list(map(int, input("Enter elements: ").split())) 
+x = int(input("Enter element to search: ")) 
+count = 0 
+for i in lst: 
+if i == x: 
+count += 1 
+print("Count =", count) 
+###
+
+6.Reverse list 
+lst = list(map(int, input("Enter elements: ").split())) 
+rev = [] 
+for i in range(len(lst)-1, -1, -1): 
+rev.append(lst[i]) 
+print("Reversed list:", rev) 
+###
+
+7. Separate positive and negative numbers 
+lst = list(map(int, input("Enter elements: ").split())) 
+pos = [] 
+neg = [] 
+for i in lst: 
+if i >= 0: 
+pos.append(i) 
+else: 
+neg.append(i) 
+print("Positive:", pos) 
+print("Negative:", neg) 
+###
+
+8. Remove duplicates 
+lst = list(map(int, input("Enter elements: ").split())) 
+new = [] 
+for i in lst: 
+if i not in new: 
+new.append(i) 
+print("Without duplicates:", new) 
+###
+
+9. Check list is sorted or not 
+lst = list(map(int, input("Enter elements: ").split())) 
+flag = True 
+for i in range(len(lst)-1): 
+if lst[i] > lst[i+1]: 
+flag = False 
+break 
+if flag: 
+print("List is sorted") 
+else: 
+print("List is not sorted") 
+######
+
+
+10.Second largest element 
+lst = list(map(int, input("Enter elements: ").split())) 
+first = second = -999999 
+for i in lst: 
+if i > first: 
+second = first 
+first = i 
+elif i > second and i != first: 
+second = i 
+print("Second largest:", second) 
+###
+
+
+11. Merge Two Lists 
+list1 = [1,2,3,4,5] 
+list2 = [6,7,8,9,10] 
+merged = list1 + list2 
+print("List 1:", list1) 
+print("List 2:", list2) 
+print("Merged List:", merged) 
+###
+
+12. Find Common Elements Between Two Lists 
+list1 = [1,2,3,4,5] 
+list2 = [4,5,6,7,8] 
+common = [] 
+for i in list1: 
+if i in list2: 
+common.append(i) 
+print("Common Elements:", common) 
+###
+
+13. Rotate List by K Positions 
+(Left rotation example) 
+lst = [1,2,3,4,5,6,7,8,9,10] 
+k = 3 
+rotated = lst[k:] + lst[:k] 
+print("Original List:", lst) 
+print("Rotated List:", rotated) 
+###
+
+14. Frequency of Each Element 
+lst = [1,2,2,3,3,3,4,4,5] 
+freq = {} 
+for i in lst: 
+if i in freq: 
+freq[i] += 1 
+else: 
+freq[i] = 1 
+print("Frequency:", freq) 
+###
+
+15.Split List into Even Index and Odd Index Lists 
+lst = [10,20,30,40,50,60,70] 
+even_index = [] 
+odd_index = [] 
+for i in range(len(lst)): 
+if i % 2 == 0: 
+even_index.append(lst[i]) 
+else: 
+odd_index.append(lst[i]) 
+print("Even Index List:", even_index) 
+print("Odd Index List:", odd_index)
