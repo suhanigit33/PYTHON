@@ -1,0 +1,148 @@
+1. Display tuple using loop 
+t = tuple(map(int, input("Enter elements: ").split())) 
+for i in t: 
+print(i) 
+###
+
+2. Count elements in tuple 
+t = tuple(map(int, input("Enter elements: ").split())) 
+count = 0 
+for i in t: 
+count += 1 
+print("Total elements:", count) 
+###
+
+3. Sum of tuple elements 
+t = tuple(map(int, input("Enter elements: ").split())) 
+s = 0 
+for i in t: 
+s += i 
+print("Sum =", s) 
+###
+
+4.Check element exists 
+t = tuple(map(int, input("Enter elements: ").split())) 
+x = int(input("Enter element to search: ")) 
+if x in t: 
+print("Exists") 
+else: 
+print("Not exists") 
+###
+
+
+5.Even and odd count 
+t = tuple(map(int, input("Enter elements: ").split())) 
+even = odd = 0 
+for i in t: 
+if i % 2 == 0: 
+even += 1 
+else: 
+odd += 1 
+print("Even:", even) 
+print("Odd:", odd) 
+###
+
+6.Maximum and Minimum Element in Tuple 
+t = (10, 5, 20, 8, 15) 
+maximum = t[0] 
+minimum = t[0] 
+for i in t: 
+if i > maximum: 
+maximum = i 
+if i < minimum: 
+minimum = i 
+print("Maximum:", maximum) 
+print("Minimum:", minimum) 
+###
+
+7. Convert Tuple into List 
+t = (1, 2, 3, 4, 5) 
+lst = list(t) 
+print("Tuple:", t) 
+print("List:", lst) 
+###
+
+
+8.Reverse Tuple Using Loop 
+t = (1, 2, 3, 4, 5) 
+rev = [] 
+for i in range(len(t)-1, -1, -1): 
+rev.append(t[i]) 
+rev_tuple = tuple(rev) 
+print("Original Tuple:", t) 
+print("Reversed Tuple:", rev_tuple) 
+###
+
+
+
+9. Count Occurrences of Each Element 
+t = (1, 2, 2, 3, 3, 3, 4) 
+freq = {} 
+for i in t: 
+if i in freq: 
+freq[i] += 1 
+else: 
+freq[i] = 1 
+print("Frequency:", freq) 
+###
+
+
+10.New Tuple Containing Only Positive Numbers 
+t = (-5, 10, -2, 15, 20, -1) 
+pos = [] 
+for i in t: 
+if i > 0: 
+pos.append(i) 
+pos_tuple = tuple(pos) 
+print("Positive Tuple:", pos_tuple) 
+###
+
+
+
+11. Demonstrate Immutability of Tuple 
+t = (1, 2, 3) 
+print("Original Tuple:", t) 
+# Tuples cannot be changed 
+# t[0] = 10   # This will give error 
+###
+
+
+12.Check Tuple is Palindrome 
+t = (1, 2, 3, 2, 1) 
+if t == t[::-1]: 
+print("Tuple is Palindrome") 
+else: 
+print("Tuple is Not Palindrome") 
+###
+
+
+
+13. Extract Elements at Even Positions 
+t = (10, 20, 30, 40, 50, 60) 
+even_pos = [] 
+for i in range(len(t)): 
+if i % 2 == 0: 
+even_pos.append(t[i]) 
+print("Even Position Elements:", tuple(even_pos)) 
+###
+
+
+14.Compare Two Tuples Element-wise 
+t1 = (1, 2, 3) 
+t2 = (1, 5, 3) 
+for i in range(len(t1)): 
+if t1[i] == t2[i]: 
+print("Same at position", i) 
+else: 
+print("Different at position", i) 
+###
+
+
+15. Find Common Elements Between Two Tuples 
+t1 = (1, 2, 3, 4, 5) 
+t2 = (4, 5, 6, 7) 
+common = [] 
+for i in t1: 
+if i in t2: 
+common.append(i) 
+print("Common Elements:", tuple(common))
